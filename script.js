@@ -1,0 +1,1 @@
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}));document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();alert('Thank you! We will contact you soon.');e.target.reset()});
