@@ -38,3 +38,46 @@
 <img src="assets/snowboarding-gulmarg.png" alt="Snowboarding in Gulmarg">
 <img src="assets/winter-mountains.png" alt="Snowy mountain landscape">
 </section><section id="contact" class="contact"><div><p class="eyebrow">GET IN TOUCH</p><h2>Ready For Your <span>Next Adventure?</span></h2><p>Contact us for courses, packages and bookings.</p><p><strong>WhatsApp:</strong> 080821 13083<br><strong>Email:</strong> Kashmirskiacademy@gmail.com<br><strong>Location:</strong> Gulmarg, Kashmir, Jammu & Kashmir — PIN 193403</p></div><form id="form"><input required placeholder="Your Name"><input required type="email" placeholder="Your Email"><input placeholder="Phone Number"><select><option>Select Course</option><option>Beginner Skiing</option><option>Intermediate Skiing</option><option>Advanced Skiing</option><option>Snowboarding</option></select><textarea rows="5" placeholder="Your message"></textarea><button>Send Enquiry →</button></form></section><footer><b>❄ KASHMIR SKI AND SNOWBOARDING SCHOOL</b><p>Ski • Snowboard • Explore Kashmir</p><p>Gulmarg, Kashmir, Jammu & Kashmir — 193403</p><p>WhatsApp: 080821 13083 · Email: Kashmirskiacademy@gmail.com</p><p>© 2026 Kashmir Ski and Snowboarding School</p></footer><script src="script.js"></script></body></html>
+<!-- WHATSAPP BOOKING FORM -->
+<section id="booking" class="contact">
+  <h2>Book Your Ski Lesson</h2>
+  <p>Fill in your details to send a booking request directly to us on WhatsApp.</p>
+
+  <form id="bookingForm">
+    <p><input name="customerName" placeholder="Your full name" required></p>
+    <p><input name="customerPhone" type="tel" placeholder="Your WhatsApp number" required></p>
+    <p><label for="bookingDate">Preferred date:</label>
+    <input id="bookingDate" name="date" type="date" required></p>
+
+    <p><select name="lesson" required>
+      <option value="">Choose your lesson</option>
+      <option>Skiing - Beginner</option>
+      <option>Skiing - Intermediate</option>
+      <option>Skiing - Advanced</option>
+      <option>Snowboarding</option>
+    </select></p>
+
+    <p><input name="people" type="number" min="1" max="20" placeholder="Number of people" required></p>
+    <p><textarea name="message" placeholder="Additional details (optional)"></textarea></p>
+
+    <button type="submit">Send Booking on WhatsApp</button>
+  </form>
+</section>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const f = this;
+  const message = `New booking request - Kashmir Ski and Snowboarding School
+Name: ${f.elements["customerName"].value}
+Customer WhatsApp: ${f.elements["customerPhone"].value}
+Preferred date: ${f.elements["date"].value}
+Lesson: ${f.elements["lesson"].value}
+People: ${f.elements["people"].value}
+Details: ${f.elements["message"].value}`;
+
+  window.open("https://wa.me/918082113083?text=" + encodeURIComponent(message), "_blank");
+});
+</script>
+<!-- END WHATSAPP BOOKING FORM -->
+
