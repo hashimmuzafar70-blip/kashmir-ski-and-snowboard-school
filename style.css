@@ -59,3 +59,50 @@
   }
 }
 
+
+/* Attractive information sections */
+.info-section {
+  padding: 65px 6%;
+  background: #f8f6ef;
+  color: #12365b;
+}
+
+.info-section h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #008f7a;
+  margin-bottom: 25px;
+}
+
+.info-card {
+  background: white;
+  padding: 28px;
+  margin: 20px 0;
+  border-radius: 18px;
+  border: 1px solid #e1e7ec;
+  box-shadow: 0 8px 24px rgba(0, 30, 60, 0.10);
+}
+
+.info-card h3 {
+  color: #008f7a;
+  font-size: 23px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.info-card p,
+.info-card li {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .info-section {
+    padding: 42px 6%;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+}
